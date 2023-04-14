@@ -168,7 +168,7 @@ function Home() {
     <Layout>
       <button
         onClick={depositFunds}
-        className="bg-green-500 p-3 rounded-full px-5 text-white my-12"
+        className="p-3 px-5 my-12 text-white bg-green-500 rounded-full"
       >
         Deposit Payment
       </button>
@@ -177,7 +177,7 @@ function Home() {
 
       <h2>
         Admin:{' '}
-        <span className="text-blue-600 cursor-pointer ml-2">
+        <span className="ml-2 text-blue-600 cursor-pointer">
           {`${adminAddress.substring(0, 4)}....${adminAddress.substring(
             adminAddress.length - 4
           )}`}
@@ -186,7 +186,7 @@ function Home() {
       <h2>
         Buyer:
         {buyer && (
-          <span className="text-blue-600 ml-2 cursor-pointer">
+          <span className="ml-2 text-blue-600 cursor-pointer">
             {`${buyer.substring(0, 4)}....${buyer.substring(
               adminAddress.length - 4
             )}`}
@@ -196,7 +196,7 @@ function Home() {
       <h2>
         Seller:
         {seller && (
-          <span className="text-blue-600 ml-2 cursor-pointer">
+          <span className="ml-2 text-blue-600 cursor-pointer">
             {`${seller.substring(0, 4)}....${seller.substring(
               adminAddress.length - 4
             )}`}
@@ -205,13 +205,13 @@ function Home() {
       </h2>
 
       {/* Timeline */}
-      <div className="flex flex-1 items-center">
+      <div className="flex items-center flex-1">
         {account &&
           buyer.toLocaleLowerCase() === account.toLocaleLowerCase() &&
           !buyerConfirmed && (
             <button
               onClick={confirmDelivery}
-              className="bg-blue-300 h-10 rounded-full border-2 border-blue-600 px-4 text-blue-600"
+              className="h-10 px-4 text-blue-600 bg-blue-300 border-2 border-blue-600 rounded-full"
             >
               Confirm Delivery
             </button>
@@ -221,7 +221,7 @@ function Home() {
           !sellerConfirmed && (
             <button
               onClick={confirmReceipt}
-              className="bg-orange-300 h-10 rounded-full border-2 border-orange-600 px-4 text-orange-600"
+              className="h-10 px-4 text-orange-600 bg-orange-300 border-2 border-orange-600 rounded-full"
             >
               Confirm Recipt
             </button>
