@@ -71,7 +71,7 @@ contract Escrow {
         // Call the release payment here...
         if (buyerConfirmation && sellerConfirmation) {
             s_seller.transfer(address(this).balance);
-            sellerConfirmation = false;
+            sellerConfirmation = true;
             s_balance = 0;
         }
     }
